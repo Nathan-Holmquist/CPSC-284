@@ -1,0 +1,145 @@
+# For Lab 2, the main Python program needed is as follows
+
+
+
+
+from sympy import *                                         #This makes the rref() function available
+from sympy.interactive.printing import init_printing        #This is for formatting of matrices
+import math                                                 #For square roots
+
+A = Matrix([[2,-1],[1,3],[5,1]])                           #A is a coefficient matrix for a linear system
+A                                                          #Prints the matrix A
+print()
+
+
+b = Matrix([[5],[2],[4]])                                  #column matrix b for the system Ax=b
+b                                                          #prints matrix b
+print()
+
+
+AugA = A.row_join(b)                                        #Forms the augmented matrix [A|b]  (Make sure b has the same number of rows as A)
+AugA                                                        
+print()
+
+
+D = AugA.rref()                                             #reduced row echelon form for AugA
+D[0]                                                        #Prints the matrix D (without info about columns with leading 1's)
+print()
+
+
+AT = A.transpose()                                          #Transpose of matrix A
+AT
+print()
+
+
+AugAT = AT*AugA                                             #AT multiplied by the augmented matrix for the original system
+AugAT
+print()
+
+
+D = AugAT.rref()                                            #Converts the new augmented matrix into reduced row echelon form
+D[0]
+print()
+
+
+
+
+####################################################################
+
+
+
+
+
+
+#Code for producing the graphs in Questions 4-7 of Lab 2
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2,4,num=100)
+
+a = 1                                     #Replace a, b, c, d by the values produced by your programs
+b = 2
+c = 0                                     #Make sure that c = 0 when graphing a line
+d = 0                                     #Make sure that d = 0 when graphing a line or a parabola
+
+fx = []
+for i in range(len(x)):
+  fx.append( a + b*x[i] + c*x[i]**2 + d*x[i]**3 )
+
+
+plt.plot(x,fx)
+plt.axvline()
+plt.axhline()
+plt.plot([-1,0,1,2,3],[-2,2,1,3,4],'bo')   #Plots the five given points in Questions 5-10 as blue dots
+plt.show()
+
+
+
+
+
+
+
+
+
+
+#######################  
+
+
+
+
+
+#Code for calculating lengths of vectors in Question 5
+
+
+from sympy import *                                         #This makes the rref() function available
+from sympy.interactive.printing import init_printing        #This is for formatting of matrices
+import math                                                 #For square roots
+
+
+
+A = Matrix([[1,-1],[1,0],[1,1],[1,2],[1,3]])                           #A is a coefficient matrix for the linear system in Question 4
+A                                                                                            #Prints the matrix A
+print()
+
+b = Matrix([[-2],[2],[1],[3],[4]])                                  #column matrix b for the system Ax=b
+b                                                           #prints matrix b
+print()
+
+
+
+
+
+
+x = Matrix([[1/2],[1/3]])                                    #replace these entries with a and b from Question 4
+y = Matrix([[1],[2]])                                        #replace these entries with a1 and b1 from Question 5
+print()
+
+
+z = A*x - b                                                 #Calculates matrix Ax - b as z
+z
+print()
+
+
+square = z.transpose() * z                                  #square is a 1x1 matrix with the dot product of y with itself as the singel entry
+lengthx = sqrt(square[0,0])                                  #length of the vector Ax-b
+
+
+
+z = A*y - b                                                 #Calculates matrix Ay - b as z
+z
+print()
+
+
+square = z.transpose() * z                                  #square is a 1x1 matrix with the dot product of y with itself as the singel entry
+lengthy = sqrt(square[0,0])                                  #length of the vector Ax-b
+
+print()
+print('length of Ax-b = ',lengthx)
+print('length of Ay-b = ',lengthy)
+
+
+
+
+
