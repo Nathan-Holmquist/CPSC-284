@@ -1,2 +1,1 @@
-# CPSC-284
-Lab2 CPSC284
+This is a repository for the CPSC 284 Lab2
