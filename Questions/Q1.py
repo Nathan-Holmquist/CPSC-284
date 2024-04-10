@@ -2,12 +2,12 @@ from sympy import *                                         #This makes the rref
 from sympy.interactive.printing import init_printing        #This is for formatting of matrices
 import math                                                 #For square roots
 
-A = Matrix([[1,1],[1,-1],[2,1]])                           #A is a coefficient matrix for a linear system
+A = Matrix([[2,-1],[3,-4],[-1,3]])                           #A is a coefficient matrix for a linear system
 print("Coefficient Matrix A:")                                                          #Prints the matrix A
 print(A)
 
 
-b = Matrix([[5],[3],[8]])                                  #column matrix b for the system Ax=b                                   #prints matrix b
+b = Matrix([[7],[5],[4]])                                  #column matrix b for the system Ax=b                                   #prints matrix b
 
 
 
@@ -22,10 +22,6 @@ print(D[0])
 
 
 AT = A.transpose()                                          #Transpose of matrix A
-print("Transpose of matrix A: ")
-print(AT)
-
-
 AugAT = AT*AugA                                             #AT multiplied by the augmented matrix for the original system
 print("AT multiplied by the augmented matrix for the original system:")
 print(AugAT)
