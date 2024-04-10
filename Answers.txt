@@ -7,6 +7,11 @@ Q1.
                           [3]
                           [8]
 
+    x + y = 5
+    x − y = 3      from equations 1 and 2 we can get y = 1, x = 4
+    2x + y = 8      however when plugged into the 3rd equation it ends up
+                    with 9=8 which is invalid meaning this linear system is invalid
+
 
 Q2.
 
