@@ -1,5 +1,15 @@
 Q1.
+
+     Coeficient matrix would be [1,1]
+                                [1,-1]
+                                [2,1]
+     Augmented matrix is: [5]
+                          [3]
+                          [8]
+
+
 Q2.
+
 Q3.
 Q4.
 Q5.
