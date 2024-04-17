@@ -61,3 +61,11 @@ Graph shows that it comes closest to the points (2,3)
 
 Q5 
 So we found the graph that goes through the points. The line that goes through is A = -1/3 and B = 5/3
+
+Q6  A = Matrix([[1, -1, 1], [1, 0, 0], [1, 1, 1], [1, 2, 4], [1, 3, 9]])
+B = Matrix([[-2], [2], [1], [3], [4]])
+RREF = (Matrix([
+[1, 0, 0,  18/35],
+[0, 1, 0, 121/70],
+[0, 0, 1,  -3/14]]), (0, 1, 2))
+Graph shows parabola goes cloest to the points
